@@ -29,8 +29,21 @@ int * ptr;
 ptr = &a;
 ```
 
+## Pointers to Arrays
+
 ## Dereferencing Pointers
 
 ## Pointing to a Pointer
 
 Pointer can point to another pointer. To do so,
+
+## Dynamic Memory Allocation
+
+- Defines data requirements at runtime, rather than defining
+  a predefined amount of memory
+- Makes program flexible to request only needed memory
+- Dynamic memory is identified by its address
+- Pointers hold the address for this type of memory
+- Release the memory when is no needed
+- But it can cause memory leaks if there is error in the code
+- Watch out for memory fragmentation
