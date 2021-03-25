@@ -33,15 +33,30 @@ ptr = &a;
 
 When an array is initialized, the array automatically will have
 an address for the first element in the array. Hence, this value
-can be assigned to the pointer.
+can be assigned to the pointer, in which if normal primitive data type,
+the pointer has to refer to the address of the variable.
 
 I.E.
 
 ```c
+// the pointer is pointing to the address of the variable
+int sum;
+int* sumPtr;
+sumPtr = &sum
 
+
+// the pointer is pointing to the array directly wihtout the need of address referencing operator -> &
+int average[10];
+int* averagePtr;
+averagePtr = average
 ```
 
 ## Dereferencing Pointers
+
+A pointer can access the value of the address indirectly, hence we
+can use a pointer to return the value of the pointer. The implementation
+of this concept can be found in ch02_01. In this case, we are using the pointer
+to return the value of the pointer variable.
 
 ## Pointing to a Pointer
 
@@ -57,3 +72,25 @@ Pointer can point to another pointer. To do so,
 - Release the memory when is no needed
 - But it can cause memory leaks if there is error in the code
 - Watch out for memory fragmentation
+
+## Passing Pointers as Argument
+
+- This is also known as pass by reference
+
+## Stack and Heap
+
+### Stack
+
+- Variables created at compile time are stored in the stack.
+- The stack has a fixed zise dertermined by the computer.
+- When the variable is not longer used, the stack is released
+- Function arguments are stored pn the stack
+- return location is also stored on stack
+
+### Heap
+
+- Memory that is not used by the OS or programs is called heap
+- It will be used for dynamic variable allocation
+- The `new` keyword operator is used for dynamic memory allocation
+- This return the address of the space stored in the pointer
+- The complement is the `delete` operator.
