@@ -31,6 +31,16 @@ ptr = &a;
 
 ## Pointers to Arrays
 
+When an array is initialized, the array automatically will have
+an address for the first element in the array. Hence, this value
+can be assigned to the pointer.
+
+I.E.
+
+```c
+
+```
+
 ## Dereferencing Pointers
 
 ## Pointing to a Pointer
